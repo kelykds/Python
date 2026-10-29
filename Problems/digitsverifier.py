@@ -40,27 +40,28 @@ def verificador(k):
             return False
 
 
-if verificador(k) == True:
+if verificador(k_str) == True:
     print("O CPF é válido. A pessoa física é de: ")
-    if digits[2] == 0:
+    regiao = digits[8]
+    if regiao == 0:
         print("RS\n")
-    elif digits[2] == 1:
+    elif regiao == 1:
         print("DF, GO, MS, MT ou TO\n")
-    elif digits[2] == 2:
+    elif regiao == 2:
         print("AC, AM, AP, PA, RO ou RR\n")
-    elif digits[2] == 3:
+    elif regiao == 3:
             print("CE, MA ou PI\n")
-    elif digits[2] == 4:
+    elif regiao == 4:
         print("AL, PB, PE ou RN\n")
-    elif digits[2] == 5:
+    elif regiao == 5:
         print("BA ou SE\n")
-    elif digits[2] == 6:
+    elif regiao == 6:
         print("MG\n")
-    elif digits[2] == 7:
+    elif regiao == 7:
         print("ES ou RJ\n")
-    elif digits[2] == 8:
+    elif regiao == 8:
         print("SP\n")
-    elif digits[2] == 9:
+    elif regiao == 9:
         print("PR ou SC\n")
 else:
     print("O CPF digitado é invalido.")
