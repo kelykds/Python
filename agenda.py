@@ -24,3 +24,7 @@ if conf == 'y':
             
     else:
         print("Opção não encontrada.")
+
+print("\nContatos salvos:")
+for nome, contato in agenda.items():
+     print(nome, "-", contato)
