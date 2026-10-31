@@ -1,7 +1,9 @@
 import random
+import string
 from words import words
 
 word = ""
+vidas = 6
 
 def gvalidword(words):
     word = random.choice(words) # pega uma aleatória
@@ -11,7 +13,7 @@ def gvalidword(words):
     return word
 
 def hangman():
-    word = gvalidword(words)
+    word = gvalidword(words).upper()
     wletters = set(word) #letras que já estão
     alphabet = set(string.ascii_uppercase)
     usedlett = set()
@@ -38,10 +40,11 @@ def hangman():
             print("Você já chutou essa... Tente novamente.")
         else:
             print("Caractere inválido. Tente de novo.")
+    
+    if vidas == 0:
+      print("Game Over! Suas vidas acabaram! A palavra era:", word)
+    else:
+      print("Parabéns! Você advinhou a palavra!")  
 
 #acaba quando termina a palavra ou as vidas
-
-if vidas == 0:
-    print("Game Over! Suas vidas acabaram! A palavra era:", word)
-else:
-    print("Parabéns! Você advinhou a palavra!")
+hangman()
