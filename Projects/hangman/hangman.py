@@ -44,7 +44,7 @@ def hangman():
     if vidas == 0:
       print("Game Over! Suas vidas acabaram! A palavra era:", word)
     else:
-      print("Parabéns! Você advinhou a palavra!")  
+      print("Parabéns! Você advinhou a palavra: ", word)  
 
 #acaba quando termina a palavra ou as vidas
 hangman()
